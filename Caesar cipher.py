@@ -1,0 +1,2 @@
+def break_caesar_cipher(ciphertext, known_word):
+    return [x for x in ["".join(chr((ord(c) - ord('A') + k) % 26 + ord('a')) if c.isalpha() else c for c in ciphertext) for k in range(26)] if known_word.lower() in x.split()][0]
